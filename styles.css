@@ -135,7 +135,7 @@
        position: absolute;
        width: 30%;
        height: 100vh;
-       background-color: rgb(226, 226, 226);
+       background-color: var(--White);
        left: -200px;
        visibility: hidden;
        opacity: 0;
@@ -201,6 +201,7 @@
 }
 .card_open{
     display: flex;
+    background-color: #fff;
 }
 
 /* end navigation */
@@ -221,12 +222,12 @@
 .let-side{
     width: 50%;
     height: max-content;
-    background-color: #fff;
+    /* background-color: #fff; */
 }
 .right-side{
     width: 46%;
     height: 400px;
-    background-color: #fff;
+    /* background-color: #fff; */
     display: flex;
 }
 .product-photos{
@@ -409,6 +410,15 @@ span{
         height: max-content;
         display: flex;
         justify-content: center;
+    }
+    /* card container */
+    .card-list-container{
+        width: 80%;
+        height: 400px;
+        left:50%;
+        transform:translateX(-50%);
+        margin-right:0;
+        z-index: 9999;
     }
 }
 @media screen and (max-width:450px) {

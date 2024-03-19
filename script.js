@@ -13,13 +13,13 @@ let photo_3 = document.querySelector(".thamb-3");
 let photo_4 = document.querySelector(".thamb-4");
 
 
-
-
 toggle_button.addEventListener("click", function(){
     nav_container.classList.toggle("open")
+    document.body.style.backgroundColor = "rgba(0,0,0,.4)"
 });
 close_btn.addEventListener("click", function(){
     nav_container.classList.remove("open")
+    document.body.style.backgroundColor = ""
 });
 card_button.addEventListener("click", function(){
    card_container.classList.toggle("card_open")
@@ -37,3 +37,10 @@ photo_3.addEventListener("click", ()=>{
 photo_4.addEventListener("click", ()=>{
    main_photo.src = "./images/image-product-4.jpg"
 });
+
+document.onclick = function close_nav_body(e){
+   if(!toggle_button.contains(e.target) && !toggle_button.contains(e.target)){
+      nav_container.classList.remove("open")
+      document.body.style.backgroundColor = ""
+   }
+}
