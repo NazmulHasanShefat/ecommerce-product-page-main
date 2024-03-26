@@ -180,3 +180,4 @@ mainas_btn.addEventListener("click",()=>{
 // end incress amout section when click + - button
 
 let add_to_card_btn = document.querySelector(".add_card_btn");
+let item_quantiti_sign = document.querySelector(".card-item-quantiti");
