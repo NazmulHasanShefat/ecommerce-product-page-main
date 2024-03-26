@@ -14,6 +14,8 @@
     --Lightgrayishblue: hsl(223, 64%, 98%);
     --White: hsl(0, 0%, 100%);
     --Black: hsl(0, 0%, 0%);
+    --heading_font:"Kumbh Sans", sans-serif;
+    --weight-font: 700;
 }
 .nav-continer{
     width: 100%;
@@ -253,27 +255,124 @@
 
 /* add card section */
 .card-list-container{
-    width: 200px;
+    width: 350px;
     height: 200px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     position: absolute;
     top:50px;
-    margin-right:50px;
+    right:100px;
     border-radius:6px;
     display: none;
 }
-.card-empty{
-    width: 100%;
-    height: max-content;
-    margin: auto;
-}
-.card-empty p{
-    text-align: center;
-}
 .card_open{
-    display: flex;
+    display: block;
     background-color: #fff;
 }
+/* card info */
+.card-info-container{
+    width: 97%;
+    height: 100%;
+}
+.card-heading{
+    width: 100%;
+    height: max-content;
+    font-family: var(--heading_font);
+    padding:7px;
+}
+.card-component{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:20px;
+}
+/* horizontal line */
+.horizintal-iine{
+    width: 92%;
+    height: 1px;
+    background-color: var(--Grayishblue);
+    margin-top:20px;
+}
+/* end horizontal line */
+.prodact-info{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detete-btn{
+    width: 10%;
+    height:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.detete-btn svg{
+    cursor: pointer;
+}
+.detete-btn svg:hover{
+    path{
+        fill: var(--Orange);
+    }
+}
+.prodact-img-card{
+    width: 15%;
+    height: auto;
+}
+.card-prodact-img-main{
+    width: 100%;
+    height: auto;
+}
+.prodact-card-info{
+    width: 80%;
+    height: max-content;
+    padding:5px;
+}
+.card-prodact-name{
+    font-size: 1rem;
+    font-family: var(--heading_font);
+    font-weight: 400;
+    padding-bottom:5px;
+}
+.card-prodact-amout{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    gap:4px;
+}
+/* checkout container */
+.checkout-container{
+    width: 100%;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    padding-top:20px;
+}
+.checkout-btn{
+    width: 93%;
+    height: 40px;
+    background-color: var(--Orange);
+    color:var(--White);
+    border:none;
+    outline:none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+@media screen and (max-width:768px) {
+    .card-list-container{
+        width: 80%;
+        height: 300px;
+        right:0;
+    }
+    .card-prodact-name{
+        font-size: .8rem;
+        font-family: var(--heading_font);
+        font-weight: 400;
+    }
+}
+/* end add card section */
 
 /* end navigation */
 
@@ -438,6 +537,16 @@ span{
     cursor: pointer;
     font-size: 1.3rem;
 }
+.amout_quantiti{
+    height: 30px;
+    width: 30px;
+    border:none;
+    outline: none;
+    background-color: var(--Lightgrayishblue);
+    padding:3px;
+}
+/* end amout button */
+
 .add-card-button{
     width: 70%;
     height: 40px;

@@ -137,8 +137,8 @@ let mobile_next = document.querySelector(".mobile-sli-next");
 let mobile_slide = document.querySelector(".mobile-slider");
 let mobile_img_main = document.querySelectorAll(".mobile-slide-img");
 
-
 var mobile_sliderIndex = 1;
+
 mobile_next.addEventListener("click",()=>{
    if(mobile_sliderIndex < mobile_img_main.length){
       mobile_slide.style.transform = `translatex(-${mobile_sliderIndex*100}%)`
@@ -148,17 +148,32 @@ mobile_next.addEventListener("click",()=>{
       mobile_slide.style.transform = `translatex(0%)`
       mobile_sliderIndex = 1 
    }
-})
+});
 mobile_prev.addEventListener("click",()=>{
    if(mobile_sliderIndex < mobile_img_main.length){
       mobile_slide.style.transform = `translatex(-${mobile_sliderIndex*100}%)`
-      mobile_sliderIndex--
+      mobile_sliderIndex--;
    }
    else{
-      mobile_slide.style.transform = `translatex(0%)`
-      mobile_sliderIndex = 1
+      mobile_slide.style.transform = `translatex(0)`
+      mobile_sliderIndex = 1;
    }
-})
+});
 
+// incress amount when click + and - button
+let plus_btn = document.querySelector(".amout-btn-plus");
+let mainas_btn = document.querySelector(".amout-btn-dicress");
+let quantiti_value = document.querySelector(".amout_quantiti");
 
+let quantiti_index = 0
+plus_btn.addEventListener("click",()=>{
+      quantiti_value.value = quantiti_index + 1;
+      quantiti_index++
+});
 
+mainas_btn.addEventListener("click",()=>{
+         if(quantiti_value.value > 0){
+            quantiti_value.value = quantiti_index - 1;
+            quantiti_index--
+         }
+ });
