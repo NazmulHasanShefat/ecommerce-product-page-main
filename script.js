@@ -150,7 +150,7 @@ mobile_next.addEventListener("click",()=>{
    }
 });
 mobile_prev.addEventListener("click",()=>{
-   if(mobile_sliderIndex < mobile_img_main.length){
+   if(mobile_sliderIndex > mobile_img_main.length){
       mobile_slide.style.transform = `translatex(-${mobile_sliderIndex*100}%)`
       mobile_sliderIndex--;
    }
@@ -177,3 +177,6 @@ mainas_btn.addEventListener("click",()=>{
             quantiti_index--
          }
  });
+// end incress amout section when click + - button
+
+let add_to_card_btn = document.querySelector(".add_card_btn");

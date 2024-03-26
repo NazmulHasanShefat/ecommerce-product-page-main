@@ -270,7 +270,7 @@
 }
 /* card info */
 .card-info-container{
-    width: 97%;
+    width: 100%;
     height: 100%;
 }
 .card-heading{
@@ -341,6 +341,11 @@
     height: max-content;
     display: flex;
     gap:4px;
+    font-family: var(--heading_font);
+    font-weight: 400;
+}
+.total{
+    font-weight: bolder;
 }
 /* checkout container */
 .checkout-container{
@@ -349,6 +354,7 @@
     display: flex;
     justify-content: center;
     padding-top:20px;
+    padding-bottom:14px;
 }
 .checkout-btn{
     width: 93%;
@@ -359,6 +365,11 @@
     outline:none;
     cursor: pointer;
     border-radius: 10px;
+    padding:10px;
+}
+.checkout-btn:hover{
+    background-color: var(--Orange);
+    opacity: 75%;
 }
 @media screen and (max-width:768px) {
     .card-list-container{
@@ -392,12 +403,10 @@
 .let-side{
     width: 50%;
     height: max-content;
-    /* background-color: #fff; */
 }
 .right-side{
     width: 46%;
     height: 400px;
-    /* background-color: #fff; */
     display: flex;
 }
 .product-photos{
@@ -563,6 +572,15 @@ span{
     font-family: "Kumbh Sans", sans-serif;
     cursor: pointer;
     border-radius:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+.add_card_btn svg{
+    path{
+        fill: var(--White);
+    }
 }
 .add_card_btn:hover{
     background-color: var(--Orange);
@@ -598,7 +616,7 @@ span{
     /* card container */
     .card-list-container{
         width: 80%;
-        height: 400px;
+        height: max-content;
         left:50%;
         transform:translateX(-50%);
         margin-right:0;
