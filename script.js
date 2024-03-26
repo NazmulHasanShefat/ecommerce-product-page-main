@@ -44,3 +44,121 @@ document.onclick = function close_nav_body(e){
       document.body.style.backgroundColor = ""
    }
 }
+// start carosel
+let main_photo_for_carousel = document.querySelector("#m-photo")
+let carosel_close = document.querySelector(".close-icon");
+let carousel_contant = document.querySelector(".carousel-container");
+let slide_image = document.querySelector(".slider");
+let left_indicator = document.querySelector(".next-button");
+let right_indicator = document.querySelector(".prev-button");
+let main_image = document.querySelectorAll(".images");
+// indicator images
+let indicator_1 = document.querySelector(".indicator-1");
+let indicator_2 = document.querySelector(".indicator-2");
+let indicator_3 = document.querySelector(".indicator-3");
+let indicator_4 = document.querySelector(".indicator-4");
+
+
+main_photo_for_carousel.addEventListener("click",()=>{
+    carousel_contant.classList.toggle("open_carosel")
+});
+carosel_close.addEventListener("click",()=>{
+    carousel_contant.classList.remove("open_carosel")
+});
+
+let slideNumber = 1;
+
+left_indicator.addEventListener("click",()=>{
+   if(slideNumber < main_image.length){
+      slide_image.style.transform = `translatex(-${slideNumber*350}px)`;
+      slideNumber++
+   }
+   else{
+      slide_image.style.transform = `translatex(0)`;
+      slideNumber = 1
+   }
+})
+right_indicator.addEventListener("click",()=>{
+   if(slideNumber > main_image.length){
+      slide_image.style.transform = `translatex(-${slideNumber*350}px)`;
+      slideNumber--
+   }
+   else{
+      slide_image.style.transform = `translatex(0)`;
+      slideNumber = 1
+   }
+})
+
+// click indicator
+indicator_1.addEventListener("click",()=>{
+   if(slideNumber < main_image.length){
+      slide_image.style.transform = `translatex(-${slideNumber*350}px)`;
+      slideNumber++
+   }
+   else{
+      slide_image.style.transform = `translatex(0)`;
+      slideNumber = 1
+   }
+});
+indicator_2.addEventListener("click",()=>{
+   if(slideNumber < main_image.length){
+      slide_image.style.transform = `translatex(-${slideNumber*350}px)`;
+      slideNumber++
+   }
+   else{
+      slide_image.style.transform = `translatex(0)`;
+      slideNumber = 1
+   }
+});
+indicator_3.addEventListener("click",()=>{
+   if(slideNumber < main_image.length){
+      slide_image.style.transform = `translatex(-${slideNumber*350}px)`;
+      slideNumber++
+   }
+   else{
+      slide_image.style.transform = `translatex(0)`;
+      slideNumber = 1
+   }
+});
+indicator_4.addEventListener("click",()=>{
+   if(slideNumber < main_image.length){
+      slide_image.style.transform = `translatex(-${slideNumber*350}px)`;
+      slideNumber++
+   }
+   else{
+      slide_image.style.transform = `translatex(0)`;
+      slideNumber = 1
+   }
+});
+
+// start mobile carousel
+let mobile_prev = document.querySelector(".mobile-sli-prev");
+let mobile_next = document.querySelector(".mobile-sli-next");
+let mobile_slide = document.querySelector(".mobile-slider");
+let mobile_img_main = document.querySelectorAll(".mobile-slide-img");
+
+
+var mobile_sliderIndex = 1;
+mobile_next.addEventListener("click",()=>{
+   if(mobile_sliderIndex < mobile_img_main.length){
+      mobile_slide.style.transform = `translatex(-${mobile_sliderIndex*100}%)`
+      mobile_sliderIndex++
+   }
+   else{
+      mobile_slide.style.transform = `translatex(0%)`
+      mobile_sliderIndex = 1 
+   }
+})
+mobile_prev.addEventListener("click",()=>{
+   if(mobile_sliderIndex < mobile_img_main.length){
+      mobile_slide.style.transform = `translatex(-${mobile_sliderIndex*100}%)`
+      mobile_sliderIndex--
+   }
+   else{
+      mobile_slide.style.transform = `translatex(0%)`
+      mobile_sliderIndex = 1
+   }
+})
+
+
+

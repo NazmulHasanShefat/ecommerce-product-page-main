@@ -141,7 +141,7 @@
        opacity: 0;
        pointer-events: none;
        transition:.5s ease-in-out;
-       /* display: none; */
+       z-index: 999;
     }
     .nav-menu-continer .nav-list{
         width: 100%;
@@ -177,6 +177,77 @@
     }
     .nav-menu-continer .nav-list .menu-item .nav-link{
        font-weight: bold;
+    }
+}
+/* end navigation */
+/* mobile carousel */
+.mobile-carousel{
+    display: none;
+}
+@media screen and (max-width:570px) {
+    .let-side {
+        display: none;
+    }
+    /* carousel */
+    .mobile-slide-icon-continer-1{
+        width: 100%;
+        height: 0;
+        position: absolute;
+        top:200px;
+        display: flex;
+        justify-content: space-between;
+        z-index: 1;
+    }
+    .mobile-carousel{
+        display: flex;
+        width: 100%;
+        height: auto;
+        justify-content: center;
+    }
+    .mobile-carousel-frame{
+        width: 85%;
+        height: auto;
+        overflow-x: hidden;
+    }
+    .mobile-slider{
+        width: 100%;
+        height: auto;
+        display: flex;
+        transition:.5s;
+    }
+    .mobile-slide-img{
+        width: 100%;
+        height: auto;
+    }
+    .mobile-sli-prev{
+        height: 40px;
+        width: 40px;
+        border-radius:50%;
+        background-color: var(--White);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor:pointer;
+    }
+    .mobile-sli-next{
+        height: 40px;
+        width: 40px;
+        border-radius:50%;
+        background-color: var(--White);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor:pointer;
+    }
+    .mobile-sli-next:hover{
+       svg path{
+        stroke: red;
+       }
+    }
+    .mobile-sli-prev:hover{
+       svg path{
+        stroke: red;
+       }
     }
 }
 
@@ -269,6 +340,10 @@
     height: 75px;
     border-radius: 10px;
     cursor: pointer;
+}
+.active{
+    border: 3px solid var(--Orange);
+    opacity: 0.5;
 }
 .thambnal-img:hover{
     opacity: 0.5;
@@ -461,4 +536,113 @@ span{
         width: 80%;
         height: 90%;
     }
+}
+/* start carousel */
+.carousel-container{
+    width: 100%;
+    height: 100vh;
+    position:absolute;
+    top:0;
+    left:0;
+    background-color: rgba(0,0,0,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.frame{
+    height: 470px;
+    width: 350px;
+    /* border:1px solid red;  */
+    overflow-x: hidden;
+}
+.slider{
+    width: 100%;
+    height: 350px;
+    /* border:1px solid red;  */
+    display: flex;
+    transition:.5s;
+}
+.images{
+    width: 350px;
+    height: 350px;
+}
+.indicators{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:10px;
+    margin-top:10px
+}
+.indicator-img{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+/* closse button */
+.close-icon-container{
+    width: 100%;
+}
+.close-icon-container svg{
+    float: right;
+    margin-bottom:5px;
+    cursor: pointer;
+}
+.close-icon-container svg path{
+    fill: #fff;
+}
+.close-icon-container svg:hover{
+    path{
+        fill: var(--Orange);
+    } 
+}
+/* next-prev buttons */
+.next-prev-buttons{
+    width: 352px;
+    height: max-content;
+    position: absolute;
+}
+.containe-next-prev-buttons{
+    width: 110%;
+    height: 0;
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+    bottom:175px;
+    right:20px;
+}
+.prev-button{
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.next-button{
+    height: 40px;
+    width: 40px;
+    background-color: #fff;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.prev-button:hover{
+    svg path{
+        stroke: var(--Orange);
+    }
+}
+.next-button:hover{
+    svg path{
+        stroke: var(--Orange);
+    }
+}
+/* java script */
+.open_carosel{
+    display: flex;
 }
